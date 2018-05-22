@@ -25,21 +25,21 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader"
-        ]
       }
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader"
+      //   ]
+      // }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
-    new MiniCssExtractPlugin({
-       filename: "[name].css",
-       chunkFilename: "[id].css"
-    })
+    new HtmlWebpackPlugin({ template: './public/index.html' })
+    // new MiniCssExtractPlugin({
+    //    filename: "[name].css",
+    //    chunkFilename: "[id].css"
+    // })
   ]
 };

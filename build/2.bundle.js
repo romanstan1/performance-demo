@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{348:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var u,d=n(1),o=(u=d)&&u.__esModule?u:{default:u};t.default=function(){return o.default.createElement("div",null,"Stiped Socks Page")}}}]);
