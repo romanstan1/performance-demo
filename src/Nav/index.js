@@ -1,13 +1,19 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+// import MenuItem from '@material-ui/core/MenuItem';
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
+import Logo from './logo.svg'
+import Burger from './burger.svg'
 
 const Header = styled.div`
   background: #08167c;
-  padding: 15px 10px;
+  padding: 10px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
   button {
     span {
       color: white;
@@ -15,17 +21,28 @@ const Header = styled.div`
   }
 `;
 
-
-
 const MenuLink = styled(NavLink)`
   width: 100%;
   height: 100%;
   display: block;
   line-height: 24px;
   outline: none;
-  padding: 18px 10px;
+  padding: 12px 0px;
 `;
 
+const WhiteBox = styled.div`
+  background: #fff;
+  width: 32px;
+  height: 32px;
+`;
+
+// {/* <Button
+//   aria-owns={anchorEl ? 'simple-menu' : null}
+//   aria-haspopup="true"
+//   onClick={this.handleClick}
+//   >
+//     {this.state.route}
+//   </Button> */}
 
 class SimpleMenu extends React.Component {
   state = {
@@ -45,13 +62,8 @@ class SimpleMenu extends React.Component {
     const { anchorEl } = this.state
     return (
       <Header>
-        <Button
-          aria-owns={anchorEl ? 'simple-menu' : null}
-          aria-haspopup="true"
-          onClick={this.handleClick}
-        >
-          {this.state.route}
-        </Button>
+        <WhiteBox  onClick={this.handleClick} />
+        <Logo width={100} height={40}/>
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
@@ -64,9 +76,11 @@ class SimpleMenu extends React.Component {
           <MenuLink onClick={this.handleClose} data-value='Basket' to='/basket'>Basket</MenuLink>
 
         </Menu>
+        <WhiteBox />
       </Header>
     )
   }
 }
 
+// {/* <div><img src={logo} alt=""/></div> */}
 export default SimpleMenu

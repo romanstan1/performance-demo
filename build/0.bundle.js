@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{346:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var u,a=n(1),d=(u=a)&&u.__esModule?u:{default:u};t.default=function(){return d.default.createElement("div",null,"Basket Page")}}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{354:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var u,a=n(1),d=(u=a)&&u.__esModule?u:{default:u};t.default=function(){return d.default.createElement("div",null,"Basket Page")}}}]);

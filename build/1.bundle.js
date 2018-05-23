@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{347:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var u,a=t(1),l=(u=a)&&u.__esModule?u:{default:u};n.default=function(){return l.default.createElement("div",null,"Plain Socks Page")}}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{355:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var u,a=t(1),l=(u=a)&&u.__esModule?u:{default:u};n.default=function(){return l.default.createElement("div",null,"Plain Socks Page")}}}]);
