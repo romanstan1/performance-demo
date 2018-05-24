@@ -9,6 +9,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = {
   list: {
@@ -21,6 +22,10 @@ const styles = {
     fontWeight: 400,
     lineHeight: '48px',
   },
+  menuitem: {
+    fontFamily:'Raleway, sans-serif',
+    fontSize: '15px',
+  }
 }
 
 class SwipeableTemporaryDrawer extends React.Component {
@@ -37,9 +42,16 @@ class SwipeableTemporaryDrawer extends React.Component {
 
     const sideList = (
       <div className={classes.list}>
-        <div>Some text</div>
+        <br/><br/><br/>
         <Divider />
-        <div>Some text</div>
+        <MenuItem className={classes.menuitem}>Eyeglasses</MenuItem>
+        <Divider />
+        <MenuItem className={classes.menuitem}>Sunglasses</MenuItem>
+        <Divider />
+        <MenuItem className={classes.menuitem}>Contact lenses</MenuItem>
+        <Divider />
+        <MenuItem className={classes.menuitem}>Accessories</MenuItem>
+        <Divider />
       </div>
     )
     const heading = (
@@ -71,7 +83,7 @@ class SwipeableTemporaryDrawer extends React.Component {
           </div>
         </SwipeableDrawer>
         <IconButton onClick={this.toggleDrawer(true)}>
-          <ShoppingBasket style={{ fontSize: 32, fill:'#414b56'}}/>
+          <ShoppingBasket style={{ fontSize: 30, fill:'#414b56'}}/>
         </IconButton>
       </Fragment>
     )
