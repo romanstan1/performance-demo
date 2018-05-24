@@ -9,7 +9,7 @@ import data from './reducers'
 
 const middleware = [
   // thunk
-  logger
+  // logger
 ]
 
 const rootReducer = combineReducers({

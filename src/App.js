@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Nav from './Nav'
 import Loadable from 'react-loadable';
 import Home from './Home'
+import styled from 'styled-components'
 
 const Loading = () => <div>Loading...</div>
 

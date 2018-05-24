@@ -1,11 +1,12 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/ButtonBase';
 import Menu from '@material-ui/core/Menu';
 // import MenuItem from '@material-ui/core/MenuItem';
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import Logo from './logo.svg'
 import Burger from './burger.svg'
+import Drawer from './Drawer'
 
 const Header = styled.div`
   background: #08167c;
@@ -36,6 +37,7 @@ const WhiteBox = styled.div`
   height: 32px;
 `;
 
+
 // {/* <Button
 //   aria-owns={anchorEl ? 'simple-menu' : null}
 //   aria-haspopup="true"
@@ -62,25 +64,44 @@ class SimpleMenu extends React.Component {
     const { anchorEl } = this.state
     return (
       <Header>
-        <WhiteBox  onClick={this.handleClick} />
-        <Logo width={100} height={40}/>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={this.handleClose}
-        >
-          <MenuLink onClick={this.handleClose} data-value='Home' to='/'>Home</MenuLink>
-          <MenuLink onClick={this.handleClose} data-value='Plain Socks' to='/plain'>Plain Socks</MenuLink>
-          <MenuLink onClick={this.handleClose} data-value='Striped Socks' to='/striped'>Striped Socks</MenuLink>
-          <MenuLink onClick={this.handleClose} data-value='Basket' to='/basket'>Basket</MenuLink>
-
-        </Menu>
-        <WhiteBox />
+        <Drawer></Drawer>
       </Header>
     )
   }
 }
 
+
+
+
+
+
 // {/* <div><img src={logo} alt=""/></div> */}
+// {/* <WhiteBox onClick={this.handleClick} />
+// <Button focusRipple={true} onClick={this.handleClick}>
+// <WhiteBox onClick={this.handleClick} />
+// </Button>
+// <Logo width={100} height={40}/>
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// <Menu
+// id="simple-menu"
+// anchorEl={anchorEl}
+// open={Boolean(anchorEl)}
+// onClose={this.handleClose}
+// >
+// <MenuLink onClick={this.handleClose} data-value='Home' to='/'>Home</MenuLink>
+// <MenuLink onClick={this.handleClose} data-value='Plain Socks' to='/plain'>Plain Socks</MenuLink>
+// <MenuLink onClick={this.handleClose} data-value='Striped Socks' to='/striped'>Striped Socks</MenuLink>
+// <MenuLink onClick={this.handleClose} data-value='Basket' to='/basket'>Basket</MenuLink>
+//
+// </Menu>
+// <WhiteBox /> */}
 export default SimpleMenu
