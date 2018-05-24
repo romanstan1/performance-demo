@@ -8,14 +8,14 @@ import styled from 'styled-components'
 const Loading = () => <div>Loading...</div>
 
 const Footer = styled.footer`
-  background: #08167c;
+  background: #fff;
   padding: 10px 5%;
+  height: 150px;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
   text-align: center;
-  height: 50px;
 `;
 
 const Striped = Loadable({

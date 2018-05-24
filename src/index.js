@@ -29,9 +29,13 @@ injectGlobal`
     margin: 0;
     box-sizing: border-box;
   }
+  html {
+    background-color: #f4f4f4;
+  }
   body {
-    background-color: ghostwhite;
-    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    font-family: 'Raleway', sans-serif;
+    max-width: 750px;
   }
   a {
     text-decoration: none;

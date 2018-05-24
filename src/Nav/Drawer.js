@@ -2,8 +2,7 @@
 import React, {Fragment} from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -16,7 +15,7 @@ const styles = {
     width: 250,
   },
   heading: {
-    color: '#fff',
+    color: '#414b56',
     display: 'inline-block',
     fontSize: '18px',
     fontWeight: 400,
@@ -45,14 +44,14 @@ class SwipeableTemporaryDrawer extends React.Component {
     )
     const heading = (
       <h1 className={classes.heading}>
-        Performance Demo
+        The Spectacle Store
       </h1>
     )
 
     return (
       <Fragment>
         <IconButton onClick={this.toggleDrawer(true)}>
-          <MenuIcon />
+          <MenuIcon style={{ fontSize: 32, fill:'#414b56'}}/>
         </IconButton>
 
         {heading}
@@ -71,6 +70,9 @@ class SwipeableTemporaryDrawer extends React.Component {
             {sideList}
           </div>
         </SwipeableDrawer>
+        <IconButton onClick={this.toggleDrawer(true)}>
+          <ShoppingBasket style={{ fontSize: 32, fill:'#414b56'}}/>
+        </IconButton>
       </Fragment>
     )
   }

@@ -1,16 +1,13 @@
 import React from 'react';
 import Button from '@material-ui/core/ButtonBase';
 import Menu from '@material-ui/core/Menu';
-// import MenuItem from '@material-ui/core/MenuItem';
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-import Logo from './logo.svg'
-import Burger from './burger.svg'
 import Drawer from './Drawer'
 
 const Header = styled.div`
-  background: #08167c;
-  padding: 10px 5%;
+  background: #fff;
+  padding: 8px 8px;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -28,7 +25,7 @@ const MenuLink = styled(NavLink)`
   display: block;
   line-height: 24px;
   outline: none;
-  padding: 12px 0px;
+  padding: 0px 0px;
 `;
 
 const WhiteBox = styled.div`
@@ -36,15 +33,6 @@ const WhiteBox = styled.div`
   width: 32px;
   height: 32px;
 `;
-
-
-// {/* <Button
-//   aria-owns={anchorEl ? 'simple-menu' : null}
-//   aria-haspopup="true"
-//   onClick={this.handleClick}
-//   >
-//     {this.state.route}
-//   </Button> */}
 
 class SimpleMenu extends React.Component {
   state = {

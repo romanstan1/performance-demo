@@ -6,17 +6,14 @@ const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2 {
-    padding-top: 20px;
-  }
   .lazyload-placeholder {
     background: grey;
   }
   .imageWrap {
-    height: 300px;
-    width: 90%;
-    margin: 20px 0;
-    background: lightgrey;
+    max-height: 600px;
+    width: 100%;
+    height: 70vw;
+    margin: 0px 0;
     overflow: hidden;
     position: relative;
     img {
@@ -29,19 +26,15 @@ const StyledHome = styled.div`
       transform: translate(0%, -50%);
     }
   }
+  .infoBox {
+    height: 70vh;
+    background: #f8f8f8;
+  }
 `;
 const homeImages = (ctx => ctx.keys().map(ctx))(require.context('./assets', true, /.*/))
 
-// var image = document.images[0];
-// var downloadingImage = new Image();
-// downloadingImage.onload = function(){
-//     image.src = this.src;
-// };
-// downloadingImage.src = "https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426"
-
 const Home = () =>
 <StyledHome>
-  <h2>Home Page</h2>
     {
       homeImages.map(img =>
       <LazyLoad height={300} offset={100} key={img}>
@@ -51,6 +44,9 @@ const Home = () =>
       </LazyLoad>
       )
     }
+    <div className="infoBox">
+
+    </div>
 </StyledHome>
 
 export default Home
