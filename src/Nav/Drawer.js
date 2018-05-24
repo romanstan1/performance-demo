@@ -1,5 +1,6 @@
 
 import React, {Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
@@ -44,9 +45,17 @@ class SwipeableTemporaryDrawer extends React.Component {
       <div className={classes.list}>
         <br/><br/><br/>
         <Divider />
-        <MenuItem className={classes.menuitem}>Eyeglasses</MenuItem>
+        <Link to="">
+          <MenuItem className={classes.menuitem}>Home</MenuItem>
+        </Link>
         <Divider />
-        <MenuItem className={classes.menuitem}>Sunglasses</MenuItem>
+        <Link to="eyewear">
+          <MenuItem className={classes.menuitem}>Eyewear</MenuItem>
+        </Link>
+        <Divider />
+        <Link to="sunglasses">
+          <MenuItem className={classes.menuitem}>Sunglasses</MenuItem>
+        </Link>
         <Divider />
         <MenuItem className={classes.menuitem}>Contact lenses</MenuItem>
         <Divider />
@@ -66,7 +75,9 @@ class SwipeableTemporaryDrawer extends React.Component {
           <MenuIcon style={{ fontSize: 32, fill:'#414b56'}}/>
         </IconButton>
 
-        {heading}
+        <Link to="">
+          {heading}
+        </Link>
 
         <SwipeableDrawer
           open={this.state.left}
@@ -82,9 +93,13 @@ class SwipeableTemporaryDrawer extends React.Component {
             {sideList}
           </div>
         </SwipeableDrawer>
-        <IconButton onClick={this.toggleDrawer(true)}>
-          <ShoppingBasket style={{ fontSize: 30, fill:'#414b56'}}/>
-        </IconButton>
+
+        <Link to="basket">
+          <IconButton>
+            <ShoppingBasket style={{ fontSize: 30, fill:'#414b56'}}/>
+          </IconButton>
+        </Link>
+
       </Fragment>
     )
   }

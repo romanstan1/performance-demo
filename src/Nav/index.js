@@ -28,12 +28,6 @@ const MenuLink = styled(NavLink)`
   padding: 0px 0px;
 `;
 
-const WhiteBox = styled.div`
-  background: #fff;
-  width: 32px;
-  height: 32px;
-`;
-
 class SimpleMenu extends React.Component {
   state = {
     anchorEl: null,

@@ -1,8 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload';
-import {lightgrey, mediumgrey, darkgrey, backgroundgrey} from '../colors'
+import {lightgrey, mediumgrey, darkgrey, backgroundgrey, offwhite} from '../colors'
+import Button from '@material-ui/core/Button';
+import homeOne from './assets/home100.jpg'
+import homeTwo from './assets/home200.jpg'
+import { withStyles } from '@material-ui/core/styles';
 
+import MenuItem from '@material-ui/core/MenuItem';
+import {Link} from 'react-router-dom';
 
 const StyledHome = styled.div`
   display: flex;
@@ -18,6 +24,9 @@ const StyledHome = styled.div`
     margin: 0px 0;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       overflow: hidden;
       height: auto;
@@ -48,22 +57,51 @@ const StyledHome = styled.div`
       }
     }
   }
-`;
-const homeImages = (ctx => ctx.keys().map(ctx))(require.context('./assets', true, /.*/))
+`
+
+const MenuButton = styled.div`
+  transform: translateY(80px);
+  li {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    color: ${backgroundgrey};
+    border-radius: 40px;
+    border: 1px solid ${backgroundgrey};
+    background:rgb(252, 252, 252, 0);
+    padding: 6px 22px;
+    &:hover {
+      color: ${darkgrey};
+      background:rgb(252, 252, 252, 0.9)
+    }
+  }
+`
 
 const Home = () =>
-<StyledHome>
-    {
-      homeImages.map(img =>
-      <LazyLoad height={300} offset={100} key={img}>
-        <div className='imageWrap'>
-          <img src={img} alt=""/>
-        </div>
-      </LazyLoad>
-      )
-    }
-    <div className="infoBox">
+  <StyledHome>
+    <LazyLoad height={300} offset={100}>
+      <div className='imageWrap'>
+        <img src={homeOne} alt=""/>
+        <MenuButton>
+          <Link to="eyewear">
+            <MenuItem>Eyewear</MenuItem>
+          </Link>
+        </MenuButton>
+      </div>
+    </LazyLoad>
+    <LazyLoad height={300} offset={100}>
+      <div className='imageWrap'>
+        <img src={homeTwo} alt=""/>
 
+        <MenuButton>
+          <Link to="Sunglasses">
+            <MenuItem>Sunglasses</MenuItem>
+          </Link>
+        </MenuButton>
+
+      </div>
+    </LazyLoad>
+
+    <div className="infoBox">
       <h2>Products</h2>
       <div className="content">
         <span>Sunglasses</span> <span>Eyeglasses</span>
@@ -82,6 +120,6 @@ const Home = () =>
         <span>Menu Item</span> <span>Menu Item</span>
       </div>
     </div>
-</StyledHome>
+  </StyledHome>
 
-export default Home
+export default Home;

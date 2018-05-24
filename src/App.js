@@ -27,7 +27,6 @@ const Footer = styled.footer`
     height: 38px;
     line-height: 38px;
     outline: none;
-    ${'' /* text-align:  */}
     text-indent: 10px;
     width: calc(100% - 100px);
     margin: 20px 50px;
@@ -63,13 +62,13 @@ const Footer = styled.footer`
   }
 `;
 
-const Striped = Loadable({
-  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Striped'),
+const Eyewear = Loadable({
+  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Eyewear'),
   loading: Loading,
 })
 
-const Plain = Loadable({
-  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Plain'),
+const Sunglasses = Loadable({
+  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Sunglasses'),
   loading: Loading,
 })
 
@@ -79,15 +78,15 @@ const Basket = Loadable({
 })
 
 const App = () => {
-  Striped.preload()
-  Plain.preload()
+  Eyewear.preload()
+  Sunglasses.preload()
   Basket.preload()
   return <div>
     <Nav/>
     <Switch>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/plain" component={Plain}/>
-      <Route exact path="/striped" component={Striped}/>
+      <Route exact path="/sunglasses" component={Sunglasses}/>
+      <Route exact path="/eyewear" component={Eyewear}/>
       <Route exact path="/basket" component={Basket}/>
       <Route component={Home}/>
     </Switch>
