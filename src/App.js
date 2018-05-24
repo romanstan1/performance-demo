@@ -26,11 +26,14 @@ const Footer = styled.footer`
     display: block;
     height: 38px;
     line-height: 38px;
+    padding-top: 2px;
     outline: none;
     text-indent: 10px;
     width: calc(100% - 100px);
     margin: 20px 50px;
     border: 1px solid ${lightgrey};
+    margin-bottom: 30px;
+    font-size: 13px;
     :focus {
       ::placeholder {
       color: white;
@@ -38,7 +41,6 @@ const Footer = styled.footer`
     }
     ::placeholder {
       color: ${mediumgrey};
-      font-size: 13px;
       font-family: "Raleway", sans-serif;
     }
   }
@@ -48,6 +50,7 @@ const Footer = styled.footer`
     font-weight: 400;
     font-size: 13px;
     margin: 20px 40px;
+    line-height: 24px;
   }
   div.content {
     display: flex;
@@ -62,8 +65,8 @@ const Footer = styled.footer`
   }
 `;
 
-const Eyewear = Loadable({
-  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Eyewear'),
+const Glasses = Loadable({
+  loader: () => import(/* webpackPrefetch: true */ './ProductListing/Glasses'),
   loading: Loading,
 })
 
@@ -78,7 +81,7 @@ const Basket = Loadable({
 })
 
 const App = () => {
-  Eyewear.preload()
+  Glasses.preload()
   Sunglasses.preload()
   Basket.preload()
   return <div>
@@ -86,7 +89,7 @@ const App = () => {
     <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/sunglasses" component={Sunglasses}/>
-      <Route exact path="/eyewear" component={Eyewear}/>
+      <Route exact path="/glasses" component={Glasses}/>
       <Route exact path="/basket" component={Basket}/>
       <Route component={Home}/>
     </Switch>

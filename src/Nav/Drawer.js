@@ -1,4 +1,3 @@
-
 import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
@@ -49,8 +48,8 @@ class SwipeableTemporaryDrawer extends React.Component {
           <MenuItem className={classes.menuitem}>Home</MenuItem>
         </Link>
         <Divider />
-        <Link to="eyewear">
-          <MenuItem className={classes.menuitem}>Eyewear</MenuItem>
+        <Link to="glasses">
+          <MenuItem className={classes.menuitem}>Glasses</MenuItem>
         </Link>
         <Divider />
         <Link to="sunglasses">

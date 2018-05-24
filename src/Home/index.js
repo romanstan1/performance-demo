@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import homeOne from './assets/home100.jpg'
 import homeTwo from './assets/home200.jpg'
 import { withStyles } from '@material-ui/core/styles';
-
 import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom';
 
@@ -82,8 +81,8 @@ const Home = () =>
       <div className='imageWrap'>
         <img src={homeOne} alt=""/>
         <MenuButton>
-          <Link to="eyewear">
-            <MenuItem>Eyewear</MenuItem>
+          <Link to="glasses">
+            <MenuItem>Shop Glasses</MenuItem>
           </Link>
         </MenuButton>
       </div>
@@ -93,8 +92,8 @@ const Home = () =>
         <img src={homeTwo} alt=""/>
 
         <MenuButton>
-          <Link to="Sunglasses">
-            <MenuItem>Sunglasses</MenuItem>
+          <Link to="sunglasses">
+            <MenuItem>Shop Sunglasses</MenuItem>
           </Link>
         </MenuButton>
 
@@ -104,7 +103,7 @@ const Home = () =>
     <div className="infoBox">
       <h2>Products</h2>
       <div className="content">
-        <span>Sunglasses</span> <span>Eyeglasses</span>
+        <span>Sunglasses</span> <span>Glasses</span>
         <span>Contact Lenses</span> <span>Accessories</span>
       </div>
       <div className="divider"/>
