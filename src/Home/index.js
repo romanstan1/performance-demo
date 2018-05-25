@@ -8,6 +8,7 @@ import homeTwo from './assets/home200.jpg'
 import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom';
+import InfoBox from '../InfoBox';
 
 const StyledHome = styled.div`
   display: flex;
@@ -22,26 +23,6 @@ const StyledHome = styled.div`
     img {
       max-width: 100%;
       height: auto;
-    }
-  }
-  .infoBox {
-    padding: 25px 0;
-    width: 100%;
-    h2 {
-      font-size: 16px;
-      padding: 12px 35px;
-      color: ${darkgrey};
-    }
-    div.content {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      span {
-        width: 50%;
-        font-size: 13px;
-        color: ${mediumgrey};
-        padding: 12px 35px;
-      }
     }
   }
 `
@@ -90,26 +71,7 @@ const Home = () =>
 
       </div>
     </LazyLoad>
-
-    <div className="infoBox">
-      <h2>Products</h2>
-      <div className="content">
-        <span>Sunglasses</span> <span>Glasses</span>
-        <span>Contact Lenses</span> <span>Accessories</span>
-      </div>
-      <div className="divider"/>
-      <h2>Visit a store</h2>
-      <div className="content">
-        <span>Find a location</span><span>Book an eye test</span>
-      </div>
-      <div className="divider"/>
-      <h2>About us</h2>
-      <div className="content">
-        <span>Our story</span> <span>Blog</span>
-        <span>Careers</span> <span>Menu Item</span>
-        <span>Menu Item</span> <span>Menu Item</span>
-      </div>
-    </div>
+    <InfoBox/>
   </StyledHome>
 
 export default Home;

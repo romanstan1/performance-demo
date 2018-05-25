@@ -9,14 +9,14 @@ const glassesAssets = (ctx => ctx.keys().map(ctx))(require.context('./assets/gla
 const sunglassesAssets = (ctx => ctx.keys().map(ctx))(require.context('./assets/sunglasses', true, /.*/))
 
 const brandNames = [
-  'Specsavers',
+  'The Spectacle Store',
   'Aurora',
-  'Specsavers',
+  'The Spectacle Store',
   'Jeff Banks',
-  'Specsavers',
-  'Specsavers',
+  'The Spectacle Store',
+  'The Spectacle Store',
   'Kylie Minogue',
-  'Specsavers',
+  'The Spectacle Store',
   'Cath Kidston'
 ]
 const prices = [

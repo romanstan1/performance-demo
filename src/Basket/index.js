@@ -1,8 +1,14 @@
 import React from 'react'
+import InfoBox from '../InfoBox'
+import styled from 'styled-components'
 
+const StyledBasket = styled.div`
+
+`
 const Basket = () =>
-<div>
+<StyledBasket>
   Basket Page
-</div>
+  <InfoBox></InfoBox>
+</StyledBasket>
 
 export default Basket

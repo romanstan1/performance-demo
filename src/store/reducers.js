@@ -1,14 +1,21 @@
 
 const initialState = {
-  someData: '123'
+  basket: []
 }
 
-// Reducer
 export default (state = initialState, action) => {
   switch (action.type) {
-    case "FETCH_CATEGORIES_SUCCESS": {
+    case "ADD_TO_BASKET": {
+      return {
+        ...state,
+        basket: [].concat(state.basket, action.payload)
+      }
     }
-    case "SWIPE_SUBJECT": {
+    case "": {
+      return {
+        ...state,
+        basket: [].concat(state.basket, action.payload)
+      }
     }
     default:
       return state;
