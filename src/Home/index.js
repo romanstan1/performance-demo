@@ -17,23 +17,11 @@ const StyledHome = styled.div`
     background: ${mediumgrey};
   }
   .imageWrap {
-    max-height: 600px;
-    width: 100%;
-    height: 70vw;
-    margin: 0px 0;
-    overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0;
     img {
-      overflow: hidden;
+      max-width: 100%;
       height: auto;
-      display: block;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0%, -50%);
     }
   }
   .infoBox {
@@ -59,7 +47,10 @@ const StyledHome = styled.div`
 `
 
 const MenuButton = styled.div`
-  transform: translateY(80px);
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
   li {
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
@@ -81,7 +72,7 @@ const Home = () =>
       <div className='imageWrap'>
         <img src={homeOne} alt=""/>
         <MenuButton>
-          <Link to="glasses">
+          <Link to="/glasses">
             <MenuItem>Shop Glasses</MenuItem>
           </Link>
         </MenuButton>
@@ -92,7 +83,7 @@ const Home = () =>
         <img src={homeTwo} alt=""/>
 
         <MenuButton>
-          <Link to="sunglasses">
+          <Link to="/sunglasses">
             <MenuItem>Shop Sunglasses</MenuItem>
           </Link>
         </MenuButton>

@@ -51,39 +51,4 @@ class SimpleMenu extends React.Component {
     )
   }
 }
-
-
-
-
-
-
-// {/* <div><img src={logo} alt=""/></div> */}
-// {/* <WhiteBox onClick={this.handleClick} />
-// <Button focusRipple={true} onClick={this.handleClick}>
-// <WhiteBox onClick={this.handleClick} />
-// </Button>
-// <Logo width={100} height={40}/>
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// <Menu
-// id="simple-menu"
-// anchorEl={anchorEl}
-// open={Boolean(anchorEl)}
-// onClose={this.handleClose}
-// >
-// <MenuLink onClick={this.handleClose} data-value='Home' to='/'>Home</MenuLink>
-// <MenuLink onClick={this.handleClose} data-value='Plain Socks' to='/plain'>Plain Socks</MenuLink>
-// <MenuLink onClick={this.handleClose} data-value='Striped Socks' to='/striped'>Striped Socks</MenuLink>
-// <MenuLink onClick={this.handleClose} data-value='Basket' to='/basket'>Basket</MenuLink>
-//
-// </Menu>
-// <WhiteBox /> */}
 export default SimpleMenu

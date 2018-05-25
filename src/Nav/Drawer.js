@@ -48,11 +48,11 @@ class SwipeableTemporaryDrawer extends React.Component {
           <MenuItem className={classes.menuitem}>Home</MenuItem>
         </Link>
         <Divider />
-        <Link to="glasses">
+        <Link to="/glasses">
           <MenuItem className={classes.menuitem}>Glasses</MenuItem>
         </Link>
         <Divider />
-        <Link to="sunglasses">
+        <Link to="/sunglasses">
           <MenuItem className={classes.menuitem}>Sunglasses</MenuItem>
         </Link>
         <Divider />
@@ -93,7 +93,7 @@ class SwipeableTemporaryDrawer extends React.Component {
           </div>
         </SwipeableDrawer>
 
-        <Link to="basket">
+        <Link to="/basket">
           <IconButton>
             <ShoppingBasket style={{ fontSize: 30, fill:'#414b56'}}/>
           </IconButton>

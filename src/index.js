@@ -62,16 +62,21 @@ injectGlobal`
   }
   body {
     background-color: ${backgroundgrey};
-    max-width: 750px;
+    max-width: 510px;
   }
   a {
     text-decoration: none;
     color: inherit;
   }
   div.divider {
-    max-width: 710px;
-    margin: 20px;
-    width: calc(100vw - 40px);
-    border-bottom: 1px solid ${lightgrey};
+    max-width: 510px;
+    padding: 20px;
+    width: 100%;
+    &::after {
+      content:'';
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid ${lightgrey};
+    }
   }
 `
