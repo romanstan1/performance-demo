@@ -3,10 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=preload rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
+    <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
     <title>Performance Demo</title>
   </head>
   <body>
     <div id="root"></div>
   <script type="text/javascript" src="/main.bundle.js"></script></body>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      authDomain: "performance-test-csr.firebaseapp.com",
+      projectId: "performance-test-csr",
+    };
+    firebase.initializeApp(config);
+  </script>
 </html>
