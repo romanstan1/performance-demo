@@ -7,22 +7,13 @@ import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import data from './reducers'
 
-
-function doThis() {
-
-  return function(b) {
-   return a + b;
-  }
-}
-
 const customMiddleWare = store => next => action => {
   if(action.type === '@@router/LOCATION_CHANGE') window.scrollTo(0, 0)
   next(action);
 }
 const middleware = [
   customMiddleWare
-  // doThis,
-  ,logger
+  // ,logger
 ]
 
 const rootReducer = combineReducers({

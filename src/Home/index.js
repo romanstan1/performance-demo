@@ -8,7 +8,7 @@ import homeTwo from './assets/home200.jpg'
 import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom';
-import InfoBox from '../InfoBox';
+import InfoBox from '../modules/InfoBox';
 
 const StyledHome = styled.div`
   display: flex;

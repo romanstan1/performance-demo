@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {lightgrey, mediumgrey, darkgrey, backgroundgrey, offwhite} from '../colors'
+import {lightgrey, mediumgrey, darkgrey, backgroundgrey, offwhite} from '../../colors'
 
 const StyledInfoBox= styled.div`
   border-top: 1px solid ${lightgrey};

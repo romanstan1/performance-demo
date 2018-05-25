@@ -55,33 +55,6 @@ export const Style = styled.div`
     color: ${darkgrey};
   }
 `
-
-export const AddButton = styled.div`
-  padding-bottom: 50px;
-  li {
-    margin: 50px auto 20px auto;
-    width: 200px;
-    justify-content: center;
-    font-size: 14px;
-    font-family: 'Raleway', sans-serif;
-    color: ${backgroundgrey};
-    border-radius: 40px;
-    ${'' /* border: 1px solid ${darkgrey}; */}
-    background:${electricblue};
-    ${'' /* background:rgb(252, 252, 252, 0); */}
-    padding: 10px 28px;
-    text-align: center;
-    span {
-
-    }
-    &:hover {
-      ${'' /* color: ${darkgrey}; */}
-      background:${hoverelectricblue};
-      ${'' /* background:rgb(252, 252, 252, 0.9) */}
-    }
-  }
-`
-
 export const Shipping = styled.div`
   padding: 40px 10%;
   display: flex;

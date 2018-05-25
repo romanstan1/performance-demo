@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Style, AddButton, Shipping, Recommended} from './style'
+import {Style, Shipping, Recommended} from './style'
+import {CTAButton} from '../modules/AddButton'
 import Radio from '@material-ui/core/Radio';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
@@ -94,11 +95,11 @@ class ProductDisplay extends Component {
         </div>
         <div className='color'>{this.state.color}</div>
 
-        <AddButton>
+        <CTAButton>
           <MenuItem onClick={this.handleAddToBasket}>
             {added? 'Successfully added!' :  'Add To Basket'}
           </MenuItem>
-        </AddButton>
+        </CTAButton>
 
         <Shipping>
           <h3>Free shipping and returns on every order</h3>

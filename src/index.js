@@ -10,11 +10,8 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import {lightgrey, mediumgrey, darkgrey, backgroundgrey, offwhite} from './colors'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-
 const history = createBrowserHistory()
-
 const preloadedStore = {}
-
 const store = configureStore(preloadedStore);
 
 render(
