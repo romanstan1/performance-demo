@@ -12,10 +12,11 @@ import Delete from '@material-ui/icons/Cancel';
 const StyledBasket = styled.div``
 
 const BasketItems = styled.div`
+  border-top: 1px solid ${lightgrey};
   display: flex;
   flex-direction: column;
   background: white;
-  padding: 20px 10px;
+  padding: 0px 10px 0 10px;
   div.item {
     position: relative;
     display: flex;
@@ -24,6 +25,12 @@ const BasketItems = styled.div`
     margin: 20px 20px;
     padding: 20px 0 30px 0;
     border-bottom: 1px solid ${lightgrey};
+    &:first-child {
+      margin-top: 40px;
+    }
+    &:last-child {
+      border-bottom: 0px solid ${lightgrey};
+    }
     h4 {
       font-size: 15px;
       padding: 10px 0;
